@@ -1,0 +1,151 @@
+body {
+	font-size:13px;
+	background-image:'stars.jpeg'
+}
+
+
+#summaryBox{
+	padding:10px;
+	width:100%;
+	
+}
+
+#selectedSchool {
+	height:300px;
+	overflow:scroll
+
+}
+
+#map { 	height: 600px;
+		background-color:grey}
+		
+#theTotal{
+	
+	font-size:48px;
+	color:blue;
+	line-height:50px;
+	font-weight:bold;
+	margin-top:20px;
+	text-align:center;
+
+}
+#theScores {
+	margin-right:10px
+}
+#legendList{
+	margin-top:30px;
+	background-color:white;
+
+}
+#legendList li {
+	display:inline;
+	 list-style-type: none;
+	 color:white;
+	 font-size:14px;
+	 font-weight:bolder;
+	 
+	 padding:20px;
+	 min-width:30px;
+}
+
+#legendList li  a {
+	display:inline;
+	font-weight:bolder
+}
+.detail {
+	padding:10px;
+	margin-bottom:10px;
+
+}
+#content{
+	width: 100%;
+    height: auto;
+    margin: 0px;
+    padding:2px 0px;
+    
+}
+#right{ width: 230px;
+    height: auto;
+    float: left;
+    padding: 20px 50px 20px 20px;
+    margin: 0px;
+}
+#left {	 width: 600px;
+    height: auto;
+    float: left;
+    padding: 20px;
+    margin: 0px;}
+
+
+		
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+
+#getRandom{
+	font-size:larger
+}
+.legend {
+			text-align: left;
+			line-height: 10px;
+			color: #000;
+			background-color:#fff;
+			padding:20px;
+			opacity:.8;
+			-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; /* for old Konqueror browsers */
+		}
+		
+#legendList i {
+	width: 30px;
+	height: 15px;
+	float: left;
+	margin-right: 8px;
+	opacity: 0.7;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+
+#theSchools a {
+	color:#333333
+}
+#theScores th {
+	text-align:left;
+
+}
+
+#leg li{
+	display:inline;
+	list-style-type:none;
+	padding-right:20px
+	
+}
+
+#leg i {
+	width:20px;
+	line-height:20px;
+	padding-right:30px;
+	margin-right:20px;
+
+}
+#schoolTitle{
+	margin-bottom:20px;
+	text-align:center
+
+}
