@@ -16,8 +16,23 @@
 
 <body>
 <!--Actual Mark-up-->
-
-<div class="navbar navbar-inverse navbar-fixed-top">
+<header class="masthead">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1><a href="#" title="scroll down for your viewing pleasure">API Scores in Oakland</a><p class="lead">By student subgroup for SY 2012 to 2013 </p></h1>
+		The API measures the academic performance and improvement of schools based on results from the Standardized Reporting and Testing (STAR) and the California High School Exit Examination (CAHSEE). The State set 800 out of possible 1,000 as the API target for all schools to meet.
+	</div>
+    <div class="col-sm-6">
+      <div class="pull-right hidden-sm">    
+        <h1><a href="#"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a></h1>
+      </div>
+    </div>
+  </div>
+  </div>
+</header>	
+<div id="nav">
+<div class="navbar navbar-default navbar-static">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -42,7 +57,7 @@
         </div>
       </div>
     </div>
-	
+</div>	
 	<div class="container-fluid" style="margin-top:50px">
 		
 		<div class="row-fluid">
@@ -99,20 +114,30 @@
 		
     </div>
   <!--script stuff-->
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="jquery.tablesorter.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-  <script src="OUSD_APIScores_1213.geojson"></script>
-  <script src="Data.js"></script>
-  <script type="text/javascript" src="chart.js"></script>
-<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+	  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	  <script src="jquery.tablesorter.min.js"></script>
+	  <script src="bootstrap/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+	  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+	  <script src="OUSD_APIScores_1213.geojson"></script>
+	  <script src="Data.js"></script>
+	  <script type="text/javascript" src="chart.js"></script>
+	  <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
  
 
   <script>
 	
-
+$('#nav').affix({
+      offset: {
+        top: $('header').height()
+      }
+	});	
+	
+$('#sidebar').affix({
+      offset: {
+        top: 200
+      }
+});	
 	var theSelected = 'Schoolwide';
 	//ESTABLISH DATA BUCKETS AND COLORS
 	function getColor(d) {
@@ -303,6 +328,9 @@ var info = L.control();
 	}
 	//$('#summaryBox').html("District-wide Average :<h4> All Students</h4><span id='theTotal'>" + allScores.All + '</span>');
 	 $("#theScores").tablesorter(); 
+	
+	
+	
 	});
 	
 //CONTROLS FOR MENU GO HERE!!
