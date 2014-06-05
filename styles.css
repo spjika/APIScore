@@ -2,6 +2,10 @@ body {
 	font-size:13px;
 	background-image:'stars.jpeg'
 }
+header{
+	background-color:rgba(119,159,75,.75)
+
+}
 /*Override the bootstrap stuff*/
 .navbar-inverse .navbar-inner {
 
