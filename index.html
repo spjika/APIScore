@@ -17,11 +17,11 @@
 <body>
 <!--Actual Mark-up-->
 <header class="masthead">
-  <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <h1>API Scores in Oakland<p class="lead">By student subgroup for SY 2012 to 2013 </p></h1>
-		The API measures the academic performance and improvement of schools based on results from the Standardized Reporting and Testing (STAR) and the California High School Exit Examination (CAHSEE). The State set 800 out of possible 1,000 as the API target for all schools to meet.
+  <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span6">
+      <h1>Oakland Public School API Scores<p class="lead">For School Year 2012 to 2013 </p></h1>
+		<p>The API measures the academic performance and improvement of schools based on results from the Standardized Reporting and Testing (STAR) and the California High School Exit Examination (CAHSEE). The State set 800 out of possible 1,000 as the API target for all schools to meet.</p>
 	</div>
     <div class="col-sm-6">
       <div class="pull-right hidden-sm">    
@@ -58,10 +58,10 @@
       </div>
     </div>
 </div>	
-	<div class="container-fluid" style="margin-top:50px">
+	<div class="container-fluid" style="margin-top:20px">
 		
 		<div class="row-fluid">
-			<div class="shadow span8">
+			<div class="span8">
 				<div id="map" class="shadow">
 				</div>
 			
@@ -149,11 +149,11 @@ $('#sidebar').affix({
 	var theSelected = 'Schoolwide';
 	//ESTABLISH DATA BUCKETS AND COLORS
 	function getColor(d) {
-    return d > 900 ? '#3299CC' :
-           d > 800  ? '#3299CC' :
-           d > 700  ? '#E31A1C' :
-           d > 600  ? '#FC4E2A' :
-           d > 500  ? '#FD8D3C' :
+    return d > 900 ? '#2c7bb6' :
+           d > 800  ? '#abd9e9' :
+           d > 700  ? '#fed98e' :
+           d > 600  ? '#fdae61' :
+           d > 500  ? '#d7191c' :
                        '#cdc9c9';
 	}
 	
@@ -178,7 +178,7 @@ var map = new L.Map("map", {
         weight: 2,
         opacity: 1,
         color: getColor(feature.properties[theSelected]),
-        fillOpacity: 0.7
+        fillOpacity: 0.9
     };
 }
 
