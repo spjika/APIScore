@@ -86,13 +86,13 @@
 					</table>
 				</div>
 				<div id="summaryBox" class="shadow">
-					<h4 id="schoolTitle">DISTRICTWIDE API SCORES</h4>
-					<canvas id="chartArea" height="240" width="450"></canvas>
+					
+					<div id="chartArea" height="240" width="450"></div>
 					<div class="nav-collapse collapse">
-			 <ul id="leg">
+			 <!--<ul id="leg">
 				<li><i style="background-color:grey"></i>DISTRICTWIDE</li>
 				<li><i style="background-color:blue"></i>SCHOOL</li>
-			 </ul>
+			 </ul>-->
 			</div>
 				</div>
 				</div>
@@ -121,7 +121,7 @@
 	  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 	  <script src="OUSD_APIScores_1213.geojson"></script>
 	  <script src="Data.js"></script>
-	  <script type="text/javascript" src="chart.js"></script>
+	  <script type="text/javascript" src="highcharts.js"></script>
 	  <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
  
 
@@ -132,7 +132,12 @@ $('#nav').affix({
         top: $('header').height()
       }
 	});	
+$('#nav li').click(function(){
+	$('#nav li').removeClass('active');
 	
+	$(this).addClass('active');
+
+});	
 $('#sidebar').affix({
       offset: {
         top: 200
@@ -211,6 +216,32 @@ function theFilter(feature,layer){
 //GOOGLE CHART
 function drawChart(feature){
 	$('#schoolTitle').html(feature.properties.School)
+	
+	$('#chartArea').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: feature.properties.School
+        },
+        xAxis: {
+            categories: ["All Students","Asian","Black or African American","Hispanic or Latino","White"]
+        },
+        yAxis: {
+            title: {
+                text: 'API Score'
+            }
+        },
+        series: [{
+            name: feature.properties.School,
+            data: [feature.properties.Schoolwide,feature.properties.Asian,feature.properties.Black,feature.properties.Hispanic,feature.properties.White]
+        }, {
+            name: 'District',
+            data: [721,824,644,687,896]
+        }]
+    });
+	
+	
 	var data = {
 		labels: ["All Students","Asian","Black or African American","Hispanic or Latino","White"],
 		datasets:[
@@ -243,8 +274,8 @@ function drawChart(feature){
 		
 		}
         // Instantiate and draw our chart, passing in some options.
-        var ctx = document.getElementById('chartArea').getContext("2d");
-		var chart = new Chart(ctx).Bar(data,options);
+        //var ctx = document.getElementById('chartArea').getContext("2d");
+		//var chart = new Chart(ctx).Bar(data,options);
 	
 
 

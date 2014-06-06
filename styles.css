@@ -3,7 +3,7 @@ body {
 	background-image:'stars.jpeg'
 }
 header{
-	background-color:rgba(119,159,75,.75)
+	background-color:rgba(119,159,75,.5)
 
 }
 /*Override the bootstrap stuff*/
