@@ -55,7 +55,13 @@ a:hover {
 #map { 	height: 600px;
 		background-color:grey}
 		
-#theTotal{
+.info {
+	height: 50px;
+	width:300px;
+	background-color:blue
+
+}
+		#theTotal{
 	
 	font-size:48px;
 	color:blue;

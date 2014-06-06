@@ -61,9 +61,23 @@
 	<div class="container-fluid" style="margin-top:50px">
 		
 		<div class="row-fluid">
-			<div id="map" class="shadow span8">
+			<div class="shadow span8">
+				<div id="map" class="shadow">
+				</div>
 			
+			 <div class="nav-collapse collapse">
+				 <ul class="nav" id="legendList">
+						<li><a data-match= 'Asian' href="#">Above 900</a></li>
+						<li><a data-match= 'Black' href="#about">800 to 899</a></li>
+						<li><a data-match= 'Hispanic' href="#contact">700 to 799</a></li>
+						<li><a data-match= 'White' href="#contact">600 to 699</a></li>
+						<li><a data-match= 'EngLearner' href="#contact">500 to 599</a></li>
+						<li><a data-match= 'LowIncome' href="#contact">Below 5000</a></li>
+				
+				 </ul>
 			</div>
+			</div>
+		
 			<div class="span4" id="infoArea">
 				
 				
@@ -97,20 +111,8 @@
 				</div>
 				</div>
 			</div>
-			<div class="row-fluid span8">
-			 <div class="nav-collapse collapse">
-			 <ul class="nav" id="legendList">
-				<li><a data-match= 'Asian' href="#">Above 900</a></li>
-				<li><a data-match= 'Black' href="#about">800 to 899</a></li>
-				<li><a data-match= 'Hispanic' href="#contact">700 to 799</a></li>
-				<li><a data-match= 'White' href="#contact">600 to 699</a></li>
-				<li><a data-match= 'EngLearner' href="#contact">500 to 599</a></li>
-				<li><a data-match= 'LowIncome' href="#contact">Below 5000</a></li>
 			
-			 </ul>
-			</div>
-			</div>
-		</div>
+		
 		
     </div>
   <!--script stuff-->
@@ -241,45 +243,9 @@ function drawChart(feature){
         }]
     });
 	
-	
-	var data = {
-		labels: ["All Students","Asian","Black or African American","Hispanic or Latino","White"],
-		datasets:[
-				{
-				fillColor : "rgba(0,0,255,.75)",
-				strokeColor : "rgba(0,0,255,,1)",
-				data : [feature.properties.Schoolwide,feature.properties.Asian,feature.properties.Black,feature.properties.Hispanic,feature.properties.White]
-				},
-				{
-				fillColor : "rgba(128,128,128,.75)",
-				strokeColor : "rgba(128,128,128,1)",
-				data : [721,824,644,687,896]
-				}
-				
-		]
-	}
-	
-	
-// Set chart options
-     
-		var options = {
-			scaleOverride:true,
-			scaleSteps:8,
-			scaleStepWidth:50,
-			scaleStartValue:500,
-			scaleFontFamily:"Helvetica",
-			scaleFontSize:14
-			
-			
-		
-		}
-        // Instantiate and draw our chart, passing in some options.
-        //var ctx = document.getElementById('chartArea').getContext("2d");
-		//var chart = new Chart(ctx).Bar(data,options);
-	
-
 
 }
+
 function onEachFeature(feature, layer) {
 		// make the popup
 		
@@ -323,45 +289,28 @@ function resetMap(){
 //ACTION STEP
 resetMap();
 	//random button click stuff
-var info = L.control();
 
-		info.onAdd = function (map) {
-			this._div = L.DomUtil.create('div', 'info');
-			this.update();
-			return this._div;
-		};
-
-		info.update = function (props) {
-			this._div.innerHTML = '<h4>OUSD API Scores</h4>' +  (props ?
-				'<b>' + props.School + '</b><br />' + props.TractPov_7 + '% poverty'
-				: 'Hover over tract to see values');
-		};
-
-		info.addTo(map);
-
-	
 
 //CREATE A LEGEND!!!
 	$(document).ready(function(){
-		
-		var grades = [500,600,700,800,900],
+			var grades = [500,600,700,800,900],
 			labels = [],
 			from,to;
-		labels.push('<li style="color:#333333">API LEGEND</li>');
-		for (var i = 0; i < grades.length; i++) {
-				from = grades[i];
-				to = grades[i + 1];
-		console.log(getColor(from + 1));
-		labels.push(
-					'<li style="background:' + getColor(from + 1) + '">' +
-					from + (to ? '&ndash;' + to : '+') + '</li>');
-		$('#legendList').html(labels.join(''));
-	}
+			
+			labels.push('<li style="color:#333333">API LEGEND</li>');
+			for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+			console.log(getColor(from + 1));
+			labels.push(
+			'<li style="background:' + getColor(from + 1) + '">' +
+			from + (to ? '&ndash;' + to : '+') + '</li>');
+			$('#legendList').html(labels.join(''));
+			};
+		
+	
 	//$('#summaryBox').html("District-wide Average :<h4> All Students</h4><span id='theTotal'>" + allScores.All + '</span>');
 	 $("#theScores").tablesorter(); 
-	
-	
-	
 	});
 	
 //CONTROLS FOR MENU GO HERE!!
