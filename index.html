@@ -249,6 +249,9 @@ function drawChart(feature){
 
 function onEachFeature(feature, layer) {
 		// make the popup
+		layer.on('click',function(){
+			drawChart(feature);
+		});
 		
 		layer.bindPopup("<div id='thePopup'><strong>" + feature.properties.School + "</strong><BR/>" + feature.properties.MailStreet + "<br>Oakland,CA " + feature.properties.Zip
 		+ "<br/>All Students: " + feature.properties.Schoolwide + "</div>"
@@ -311,7 +314,7 @@ resetMap();
 		
 	
 	//$('#summaryBox').html("District-wide Average :<h4> All Students</h4><span id='theTotal'>" + allScores.All + '</span>');
-	 $("#theScores").tablesorter(); 
+	 $("#theScores").tablesorter({sortList:[[1,1]]}); 
 	});
 	
 //CONTROLS FOR MENU GO HERE!!
