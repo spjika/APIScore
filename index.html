@@ -102,7 +102,7 @@
 						<tr>
 							<th>School</th>
 							<th>API Score</th>
-							<th>Change</th>
+							<th>Difference from District</th>
 						</tr>
 						</thead>
 						<tbody id="theSchools">
@@ -298,7 +298,7 @@ function onEachFeature(feature, layer) {
 			});
 	layer.bindPopup("<div id='thePopup'><strong>" + feature.properties.School + "</strong><BR/>" + feature.properties.MailStreet + "<br>Oakland,CA " + feature.properties.Zip
 		+ "<br/> Difference from schoolwide:<br/><span style='font-size:20px' class='" + theDiffClass + "'>  " +
-		theSelected + ":" + theDiff + "</span></div>"
+		theSelected + " : " + theDiff + "</span></div>"
 		);	
 	}
 
