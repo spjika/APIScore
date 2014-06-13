@@ -125,27 +125,7 @@ a:hover {
 #theScores {
 	/*margin-right:10px*/
 }
-#legendList{
-	margin-top:30px;
-	margin-bottom:20px;
-	background-color:white;
-	
-}
-#legendList li {
-	display:inline;
-	 list-style-type: none;
-	 color:white;
-	 font-size:14px;
-	 font-weight:bolder;
-	 
-	 padding:20px;
-	 min-width:30px;
-}
 
-#legendList li  a {
-	display:inline;
-	font-weight:bolder
-}
 .detail {
 	padding:10px;
 	margin-bottom:10px;
@@ -194,10 +174,30 @@ a:hover {
 border-radius: 10px; /* future proofing */
 -khtml-border-radius: 10px; /* for old Konqueror browsers */
 		}
-		
+#legendList{
+	margin-top:30px;
+	margin-bottom:20px;
+	background-color:white;
+	
+}
+#legendList li {
+	display:inline;
+	 list-style-type: none;
+	 color:#333333;
+	 font-size:12px;
+	 font-weight:bolder;
+	padding:20px;
+	 
+}
+
+#legendList li  a {
+	display:inline;
+	font-weight:bolder
+}
+
 #legendList i {
 	width: 30px;
-	height: 15px;
+	height: 10px;
 	float: left;
 	margin-right: 8px;
 	opacity: 0.7;
@@ -227,13 +227,15 @@ border-radius: 10px; /* future proofing */
 #leg li{
 	display:inline;
 	list-style-type:none;
-	padding-right:20px
+	padding-right:20px;
+	color: black;
+
 	
 }
 
 #leg i {
 	width:20px;
-	line-height:20px;
+	line-height:15px;
 	padding-right:30px;
 	margin-right:20px;
 
@@ -262,9 +264,14 @@ border-radius: 10px; /* future proofing */
 	}
 	.navbar-inner{
 		font-size: 8px;
+		padding-left: 10px;
+		padding-right: 10px
 	}
 	.navbar .nav > li > a{
 		font-size:8px;
 	}
-	
+	#legendList li{
+		font-size: 8px;
+		padding:10px;
+	}
 }
