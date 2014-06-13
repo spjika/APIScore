@@ -56,7 +56,7 @@
 				<span class="icon-bar"></span>
 			  </button>
 			 
-			 <div class="collapse navbar-collapse">
+			 <div class="collapse navbar-collapse" id="dropMenu">
 				<ul id="menu" class="nav navbar-nav navbar-inner">
 				  <li class="active"><a data-match= 'Schoolwide' href="#contact">ALL STUDENTS</a></li>
 				  <li><a data-match= 'Asian' href="#contact">ASIAN</a></li>
@@ -149,6 +149,10 @@
  
 
   <script>
+
+$("#menu li a").click(function(){
+	$("#dropMenu").collapse('hide');
+});
 	
 $('#nav').affix({
       offset: {
