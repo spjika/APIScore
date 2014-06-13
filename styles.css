@@ -257,4 +257,14 @@ border-radius: 10px; /* future proofing */
 		line-height: 11px
 	}
 	
+	.navbar-toggle{
+		margin-top:4px;
+	}
+	.navbar-inner{
+		font-size: 8px;
+	}
+	.navbar .nav > li > a{
+		font-size:8px;
+	}
+	
 }
