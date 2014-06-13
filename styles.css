@@ -1,3 +1,20 @@
+@media (max-width: 480px){
+	h1{
+		font-size:14px;
+	}
+	#btnAbout{
+		font-size:8px;
+	}
+	#map{
+		height:100px;
+	}
+	.btn{
+		line-height: 11px
+	}
+	
+}
+
+
 .over{
 	color:blue;
 	
@@ -6,24 +23,18 @@
 	color:red;
 }
 h1 {
-font-size: 30px;
-color: #4ab100;
-font-style: italic;
+	
+	color: #4ab100;
+	font-style: italic;
 
 } 
-.abot{
-font-size: 16px;
-color: blue;
 
-}
 .vcenter {
    
     vertical-align: middle;
     
 }
-body {
-	font-size:13px;
-}
+
 
 /*Override the bootstrap stuff*/
 
