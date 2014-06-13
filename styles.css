@@ -1,18 +1,4 @@
-@media (max-width: 480px){
-	h1{
-		font-size:14px;
-	}
-	#btnAbout{
-		font-size:8px;
-	}
-	#map{
-		height:100px;
-	}
-	.btn{
-		line-height: 11px
-	}
-	
-}
+
 
 
 .over{
@@ -256,4 +242,19 @@ border-radius: 10px; /* future proofing */
 	margin-bottom:20px;
 	text-align:center
 
+}
+@media (max-width: 480px){
+	h1{
+		font-size:14px;
+	}
+	#btnAbout{
+		font-size:8px;
+	}
+	#map{
+		height:300px;
+	}
+	.btn{
+		line-height: 11px
+	}
+	
 }
