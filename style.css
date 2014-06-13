@@ -1,17 +1,19 @@
 table.tablesorter {
-	font-size: 12px;
+	
 	/*background-color: #4D4D4D;*/
-	width: 1024px;
+	width: 100%;
 	border: 0px solid #000;
 }
 table.tablesorter th {
 	padding: 5px;
 	background-color: #6E6E6E;
-	color:white
+	color:white;
+	text-align: left;
 }
 table.tablesorter td {
 	color: #333333;
 	padding: 5px;
+	text-align: center;
 }
 table.tablesorter tr:nth-child(2n) {
 	background-color: rgba(119,159,75,.5);
@@ -20,7 +22,7 @@ table.tablesorter :odd {
 	background-color: #6E6E6E;
 }
 table.tablesorter .header {
-	background-image: url(arrows.png);
+	/*background-image: url(arrows.png);*/
 	background-repeat: no-repeat;
 	border-bottom: 1px solid green;
 	border-right: 1px solid #fff;
@@ -31,10 +33,10 @@ table.tablesorter .header {
 	
 }
 table.tablesorter .headerSortUp {
-	background-image: url(arrows.png);
+	/*background-image: url(arrows.png);*/
 	background-repeat: no-repeat;
 }
 table.tablesorter .headerSortDown {
-	background-image: url(arrows.png);
+	/*background-image: url(arrows.png);*/
 	background-repeat: no-repeat;
 }

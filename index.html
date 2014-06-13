@@ -96,37 +96,36 @@
 			<div class="col-md-4" id="infoArea">
 				
 				
-				<div>
-					
-					<h4 id='theDistrict'></h4>
-				<div id="selectedSchool">
+				<div class="row">
+					<div class="col-md-10">
+					<!--<h4 id='theDistrict'></h4>-->
+						<div id="selectedSchool">
+							
+						<table id="theScores" class="tablesorter">
+							<thead>
+							<tr>
+								<th>School<span  class="glyphicon glyphicon-eject" style="color:#66CD00;float:right" ></span></th>
+								<th id="selScore"><span  style="color:#66CD00" class="glyphicon glyphicon-eject" ></span> API Score</th>
+								<th>Difference from All Students<span  class="glyphicon glyphicon-eject" style="color:#66CD00;float:right" ></span></span></th>
+							</tr>
+							</thead>
+							<tbody id="theSchools">
+							
+							</tbody>
+						</table>
+						</div>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="col-md-10">
+						<div id="summaryBox" style="display:none">
 						
-					<table id="theScores" class="tablesorter">
-						<thead>
-						<tr>
-							<th>School</th>
-							<th>API Score</th>
-							<th>Difference from District</th>
-						</tr>
-						</thead>
-						<tbody id="theSchools">
-						
-						</tbody>
-					</table>
-				</div>
-				<div id="summaryBox" style="display:none" class="shadow">
-					
-					<div id="chartArea" height="240" width="450"></div>
-					<div class="nav-collapse collapse">
-			 <!--<ul id="leg">
-				<li><i style="background-color:grey"></i>DISTRICTWIDE</li>
-				<li><i style="background-color:blue"></i>SCHOOL</li>
-			 </ul>-->
-				</div>
-				</div>
+							<div id="chartArea"></div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
 		<div class="row-fluid">
 			<div class="col-md-8" id="aboutsection">
 			<!--<a name="about"></a>-->
@@ -259,7 +258,9 @@ function drawChart(feature){
         yAxis: {
             title: {
                 text: 'API Score'
-            }
+            },
+            ceiling: 1000
+
         },
         series: [{
             name: feature.properties.School,
@@ -294,7 +295,8 @@ function onEachFeature(feature, layer) {
 				break;
 			
 		}
-		console.log(theDiffClass);
+		
+		$("#selScore").html(theSelected + "<br/> Api Score" )
 		//create row in table
 		$('#theSchools').append("<tr><td><a href='#'id='s" + feature.properties.NCESSchool + "'>" + feature.properties.School + "</a></td><td>" + feature.properties[theSelected] + 
 		"</td><td style='padding-left:10px'><span class='" + theDiffClass + "'></span>  " +
