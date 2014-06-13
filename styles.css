@@ -245,6 +245,9 @@ border-radius: 10px; /* future proofing */
 	text-align:center
 
 }
+
+
+
 @media (max-width: 480px){
 	h1{
 		font-size:14px;

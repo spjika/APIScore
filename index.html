@@ -49,11 +49,13 @@
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header navbar-inner col-md-12">
+			   <span style="font-size:1.5em; color:white;font-weight:bolder">SELECT A SUBGROUP:</span>
 			  <button type="button" class="navbar-toggle" id="dropDownMenu" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Select a subgroup</span>
+				<span class="sr-only">  <span style="font-size:1.5em; color:white;font-weight:bolder">SELECT A SUBGROUP:</span></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
+			 
 			  </button>
 			 
 			 <div class="collapse navbar-collapse" id="dropMenu">
@@ -103,10 +105,10 @@
 							
 						<table id="theScores" class="tablesorter">
 							<thead>
-							<tr>
+							<tr id="headerRow">
 								<th>School<span  class="glyphicon glyphicon-eject" style="color:#66CD00;float:right" ></span></th>
 								<th id="selScore"><span  style="color:#66CD00" class="glyphicon glyphicon-eject" ></span> API Score</th>
-								<th>Difference from All Students<span  class="glyphicon glyphicon-eject" style="color:#66CD00;float:right" ></span></span></th>
+								<th>Difference from School's Average<span  class="glyphicon glyphicon-eject" style="color:#66CD00;float:right" ></span></span></th>
 							</tr>
 							</thead>
 							<tbody id="theSchools">
@@ -298,7 +300,7 @@ function onEachFeature(feature, layer) {
 		
 		$("#selScore").html(theSelected + "<br/> Api Score" )
 		//create row in table
-		$('#theSchools').append("<tr><td><a href='#'id='s" + feature.properties.NCESSchool + "'>" + feature.properties.School + "</a></td><td>" + feature.properties[theSelected] + 
+		$('#theSchools').append("<tr><td id='firstRow'><a href='#'id='s" + feature.properties.NCESSchool + "'>" + feature.properties.School + "</a></td><td>" + feature.properties[theSelected] + 
 		"</td><td style='padding-left:10px'><span class='" + theDiffClass + "'></span>  " +
 		theDiff +"</td></tr>");
 		//bind to map popup
