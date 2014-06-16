@@ -8,7 +8,7 @@
 .under{
 	color:red;
 }
-h1 {
+h2 {
 	
 	color: #4ab100;
 	font-style: italic;
@@ -19,6 +19,9 @@ h1 {
    
     vertical-align: middle;
     
+}
+#headerRow{
+	border-top: solid thick yellow;
 }
 
 
@@ -56,7 +59,7 @@ background-image:none;
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
 	color:#333333;
 	text-shadow:none;
-font-size:10px;
+	font-size:10px;
 
 }
 

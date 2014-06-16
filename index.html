@@ -26,14 +26,15 @@
 <header class="title" style="margin-bottom:20px">
   <div class="container-fluid">
 	<div class="row-fluid vcenter">
-		<div class='col-md-3'>
-			<a href="https://www.gopublicschools.org/"><img src="https://www.gopublicschools.org/images/go_c4_logo.gif" alt="Go Public Schools Logo"></a>
+		<div class='col-md-2 text-center'>
+			<a href="https://www.gopublicschools.org/"><img class="text-center" src="https://www.gopublicschools.org/images/go_c4_logo.gif" style="width:168px;height:84px;padding-top:5px" alt="Go Public Schools Logo"></a>
 		</div>
-		<div class="col-md-7 vcenter">
-			<h1>Oakland Public Schools API Scores</h1>
+		<div class="col-md-8 vcenter text-left">
+			<h2>Oakland Public Schools API Scores</h2>
+			<h4 style="color:Green">School Years 2012 to 2013</h4>
 		</div>
-		<div class="col-md-2 vcenter">
-			<button type="button" class="btn btn-default"><a class="abot" href="#abt"><span id="btnAbout" class="glyphicon glyphicon-info-sign"></span></a></button>
+		<div class="col-md-2 vcenter text-right">
+			<a class="abot" href="#abt">ABOUT</a>
 		</div>
 	</div>
 	  <div class="row-fluid">
@@ -45,20 +46,21 @@
 	  </div>
   </div>
 </header>
-<div class="col-md-12">	
+<div class="col-md-12"   >	
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container-fluid">
-			<div class="navbar-header navbar-inner col-md-12">
-			   <span style="font-size:1.5em; color:white;font-weight:bolder">SELECT A SUBGROUP:</span>
+			<div class="navbar-header navbar-inner col-md-12" id="headerRow">
+			   
 			  <button type="button" class="navbar-toggle" id="dropDownMenu" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">  <span style="font-size:1.5em; color:white;font-weight:bolder">SELECT A SUBGROUP:</span></span>
+				<span class="sr-only"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			 
 			  </button>
-			 
+			 <span style="font-size:1.5em; color:white;font-weight:bolder;display:none">SELECT A SUBGROUP:</span>
 			 <div class="collapse navbar-collapse" id="dropMenu">
+				
 				<ul id="menu" class="nav navbar-nav navbar-inner">
 				  <li class="active"><a data-match= 'Schoolwide' href="#contact">ALL STUDENTS</a></li>
 				  <li><a data-match= 'Asian' href="#contact">ASIAN</a></li>
@@ -99,7 +101,7 @@
 				
 				
 				<div class="row">
-					<div class="col-md-10">
+					<div class="col-md-12">
 					<!--<h4 id='theDistrict'></h4>-->
 						<div id="selectedSchool">
 							
