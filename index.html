@@ -310,9 +310,9 @@ function onEachFeature(feature, layer) {
 			drawChart(feature);
 			layer.openPopup();
 			});
-	layer.bindPopup("<div id='thePopup'><strong>" + feature.properties.School + "</strong><BR/>" + feature.properties.MailStreet + "<br>Oakland,CA " + feature.properties.Zip
-		+ "<br/> Difference from schoolwide:<br/><span style='font-size:20px' class='" + theDiffClass + "'>  " +
-		theSelected + " : " + theDiff + "</span></div>"
+		layer.bindPopup("<div id='thePopup'><strong>" + feature.properties.School + "</strong><BR/>" + feature.properties.MailStreet + "<br>Oakland,CA " + feature.properties.Zip
+		+ "<h5>Selected School API</h5><table class='table table-bordered'><tr><td> API for school:</td><td>" + feature.properties.Schoolwide + "</td></tr><tr><td>" +
+		theSelected + " :</td><td> " + feature.properties[theSelected] + "</td></tr></table><h3 class='text-center'><span class='text-center "+ theDiffClass +"'>" + theDiff + "</span></h3></div>"
 		);	
 	}
 
