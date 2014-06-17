@@ -1,25 +1,18 @@
-
-
-
 .over{
 	color:blue;
 	
 }
+
 .under{
 	color:red;
 }
+
 h2 {
-	
 	color: #4ab100;
 	font-style: italic;
-
 } 
 
-.vcenter {
-   
-    vertical-align: middle;
-    
-}
+
 #headerRow{
 	border-top: solid thick yellow;
 }
@@ -48,6 +41,7 @@ h2 {
      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);*/
 }
+
 .navbar-inverse .navbar-inner {
 
 background-color:#ffffff;
@@ -81,6 +75,7 @@ font-family: "Helvetica Neue", helvetica, Arial;
 text-align: center;
 font-size: 12px;
 }
+
 .navbar .nav > li > a:hover {
 color: #0482b8;
 background: url(/~oakc4/images/gradient.png);
@@ -106,16 +101,14 @@ a:hover {
 
 }
 
-#map { 	height: 600px;
-		background-color:grey}
+#map { 	height: 600px;}
 		
 .info {
 	height: 50px;
 	width:300px;
 	background-color:blue
-
-}
-		#theTotal{
+	}
+#theTotal{
 	
 	font-size:48px;
 	color:blue;
@@ -131,24 +124,27 @@ a:hover {
 	margin-bottom:10px;
 
 }
+
 #content{
 	width: 100%;
     height: auto;
     margin: 0px;
     padding:2px 0px;
-    
 }
+
 #right{ width: 230px;
     height: auto;
     float: left;
     padding: 20px 50px 20px 20px;
     margin: 0px;
 }
+
 #left {	 width: 600px;
     height: auto;
     float: left;
     padding: 20px;
-    margin: 0px;}
+    margin: 0px;
+}
 
 
 		
@@ -156,12 +152,13 @@ a:hover {
   -moz-box-shadow:    3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px #ccc;
-}
+	}
 
 
 #getRandom{
 	font-size:larger
-}
+	}
+
 .legend {
 			text-align: left;
 			line-height: 10px;
@@ -174,12 +171,14 @@ a:hover {
 border-radius: 10px; /* future proofing */
 -khtml-border-radius: 10px; /* for old Konqueror browsers */
 		}
+
 #legendList{
 	margin-top:30px;
 	margin-bottom:20px;
 	background-color:white;
 	
 }
+
 #legendList li {
 	display:inline;
 	 list-style-type: none;
@@ -248,12 +247,27 @@ border-radius: 10px; /* future proofing */
 	text-align:center
 
 }
+#lblSelect{
+	font-size: 1.2em;
+	color: white;
+	font-weight: bolder
+}
 
+@media (min-width: 481px){
+	span#lblSelect{
+		display: none;
+		font-size: 1.2em
+	}
+
+}
 
 
 @media (max-width: 480px){
-	h1{
+	h2{
 		font-size:14px;
+	}
+	h4{
+		font-size: 12px;
 	}
 	#btnAbout{
 		font-size:8px;
@@ -287,4 +301,8 @@ border-radius: 10px; /* future proofing */
 		font-size: 10px;
 		width:80%;
 	}
+	#textSelect{
+		display:block;
+		}
+	.about{font-size: 10px}
 }
