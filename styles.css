@@ -1,21 +1,88 @@
-body {
-	font-size:13px;
-	background-image:'stars.jpeg'
+.over{
+	color:blue;
+	
 }
-header{
-	background-color:rgba(119,159,75,.5);
-	border-bottom:solid thick yellow
 
+.under{
+	color:red;
 }
+
+h2, h5 {
+	color: #4ab100;
+	font-style: italic;
+} 
+
+
+#headerRow{
+	border-top: solid thick yellow;
+}
+
+
 /*Override the bootstrap stuff*/
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    
-    color: #008000;
+.navbar-inner {
+  font-size:10px;
+  min-height: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: white;
+  background-image: -moz-linear-gradient(top, #0599D9, #0482b8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0599D9), to(#0482b8));
+  background-image: -webkit-linear-gradient(top, #0599D9, #0482b8);
+  background-image: -o-linear-gradient(top, #0599D9, #0482b8);
+  background-image: linear-gradient(to bottom, #0599D9, #0482b8);
+  background-repeat: repeat-x;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0599D9', endColorstr='#0482b8', GradientType=0);
+  *zoom: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);*/
+}
+
+.navbar-inverse .navbar-inner {
+
+background-color:#ffffff;
+background-image:none;
+
 }
 
 
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+	color:#333333;
+	text-shadow:none;
+	font-size:10px;
+
 }
+
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+    color: #0000FF;
+}
+
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+    background-color: #ffffff;
+    color: blue;
+
+}
+
+.navbar .nav > li > a {
+float: none;
+color: white;
+text-decoration: none;
+font-family: "Helvetica Neue", helvetica, Arial;
+text-align: center;
+font-size: 12px;
+}
+
+.navbar .nav > li > a:hover {
+color: #0482b8;
+background: url(/~oakc4/images/gradient.png);
+background-position: 0px -40px;
+text-shadow: 1px 0px 0px #fff;
+}
+
 a:hover {
 	color:blue
 
@@ -34,16 +101,14 @@ a:hover {
 
 }
 
-#map { 	height: 600px;
-		background-color:grey}
+#map { 	height: 600px;}
 		
 .info {
 	height: 50px;
 	width:300px;
 	background-color:blue
-
-}
-		#theTotal{
+	}
+#theTotal{
 	
 	font-size:48px;
 	color:blue;
@@ -53,52 +118,33 @@ a:hover {
 	text-align:center;
 
 }
-#theScores {
-	/*margin-right:10px*/
-}
-#legendList{
-	margin-top:30px;
-	background-color:white;
 
-}
-#legendList li {
-	display:inline;
-	 list-style-type: none;
-	 color:white;
-	 font-size:14px;
-	 font-weight:bolder;
-	 
-	 padding:20px;
-	 min-width:30px;
-}
-
-#legendList li  a {
-	display:inline;
-	font-weight:bolder
-}
 .detail {
 	padding:10px;
 	margin-bottom:10px;
 
 }
+
 #content{
 	width: 100%;
     height: auto;
     margin: 0px;
     padding:2px 0px;
-    
 }
+
 #right{ width: 230px;
     height: auto;
     float: left;
     padding: 20px 50px 20px 20px;
     margin: 0px;
 }
+
 #left {	 width: 600px;
     height: auto;
     float: left;
     padding: 20px;
-    margin: 0px;}
+    margin: 0px;
+}
 
 
 		
@@ -106,12 +152,13 @@ a:hover {
   -moz-box-shadow:    3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px #ccc;
-}
+	}
 
 
 #getRandom{
 	font-size:larger
-}
+	}
+
 .legend {
 			text-align: left;
 			line-height: 10px;
@@ -124,10 +171,32 @@ a:hover {
 border-radius: 10px; /* future proofing */
 -khtml-border-radius: 10px; /* for old Konqueror browsers */
 		}
-		
+
+#legendList{
+	margin-top:30px;
+	margin-bottom:20px;
+	background-color:white;
+	
+}
+
+#legendList li {
+	display:inline;
+	 list-style-type: none;
+	 color:#333333;
+	 font-size:12px;
+	 font-weight:bolder;
+	padding:20px;
+	 
+}
+
+#legendList li  a {
+	display:inline;
+	font-weight:bolder
+}
+
 #legendList i {
 	width: 30px;
-	height: 15px;
+	height: 10px;
 	float: left;
 	margin-right: 8px;
 	opacity: 0.7;
@@ -145,7 +214,10 @@ border-radius: 10px; /* future proofing */
     color: #777;
 }
 
-
+#chartArea{
+	width:100%;
+	height:350px;
+}
 #theSchools a {
 	color:#333333
 }
@@ -157,13 +229,15 @@ border-radius: 10px; /* future proofing */
 #leg li{
 	display:inline;
 	list-style-type:none;
-	padding-right:20px
+	padding-right:20px;
+	color: black;
+
 	
 }
 
 #leg i {
 	width:20px;
-	line-height:20px;
+	line-height:15px;
 	padding-right:30px;
 	margin-right:20px;
 
@@ -172,4 +246,63 @@ border-radius: 10px; /* future proofing */
 	margin-bottom:20px;
 	text-align:center
 
+}
+#lblSelect{
+	font-size: 1.2em;
+	color: white;
+	font-weight: bolder
+}
+
+@media (min-width: 481px){
+	span#lblSelect{
+		display: none;
+		font-size: 1.2em
+	}
+
+}
+
+
+@media (max-width: 480px){
+	h2{
+		font-size:14px;
+	}
+	h4{
+		font-size: 12px;
+	}
+	#btnAbout{
+		font-size:8px;
+	}
+	#map{
+		height:400px;
+	}
+	.btn{
+		line-height: 11px
+	}
+	
+	.navbar-toggle{
+		margin-top:4px;
+	}
+	.navbar-inner{
+		font-size: 8px;
+		padding-left: 10px;
+		padding-right: 10px
+	}
+	.navbar .nav > li > a{
+		font-size:8px;
+	}
+	#legendList li{
+		font-size: 8px;
+		padding:5px;
+	}
+	th{
+		font-size: 8px;
+	}
+	table.tablesorter{
+		font-size: 10px;
+		width:80%;
+	}
+	#textSelect{
+		display:block;
+		}
+	.about{font-size: 10px}
 }
