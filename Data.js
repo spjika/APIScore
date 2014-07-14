@@ -9,3 +9,13 @@ var allScores = {
 	Disability:552
 };
 
+var labels = {
+	AA: "African American/ Black",
+	AS: "Asian",
+	HI: "Hispanic/Latino",
+	EL: "English Learner",
+	DI: "Disability",
+	SD: "Socioeconomically Disadvantaged",
+	WH: "White",
+	ALL: "All Students"
+};

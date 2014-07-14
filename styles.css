@@ -71,7 +71,7 @@ background-image:none;
 float: none;
 color: white;
 text-decoration: none;
-font-family: "Helvetica Neue", helvetica, Arial;
+
 text-align: center;
 font-size: 12px;
 }
@@ -203,7 +203,6 @@ border-radius: 10px; /* future proofing */
 }
 .info {
     padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
     background: white;
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -216,7 +215,7 @@ border-radius: 10px; /* future proofing */
 
 #chartArea{
 	width:100%;
-	height:350px;
+	height:500px;
 }
 #theSchools a {
 	color:#333333
@@ -252,6 +251,7 @@ border-radius: 10px; /* future proofing */
 	color: white;
 	font-weight: bolder
 }
+
 
 @media (min-width: 481px){
 	span#lblSelect{
@@ -305,4 +305,4 @@ border-radius: 10px; /* future proofing */
 		display:block;
 		}
 	.about{font-size: 10px}
-}
+	}

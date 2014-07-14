@@ -27,11 +27,11 @@
   <div class="container-fluid">
 	<div class="row-fluid vcenter">
 		<div class='col-md-2 text-center'>
-			<a href="https://www.gopublicschools.org/"><img class="text-center" src="https://www.gopublicschools.org/images/go_c4_logo.gif" style="width:168px;height:84px;padding-top:5px" alt="Go Public Schools Logo"></a>
+			<a href="https://www.gopublicschools.org/"><img class="text-center" src="images/go_leadercenter.jpg" style="width:168px;height:84px;padding-top:5px" alt="Go Public Schools Logo"></a>
 		</div>
 		<div class="col-md-8 vcenter text-center">
 			<h2>Oakland Public Schools API Scores</h2>
-			<h4 style="color:#4ab100">For School Years 2012 to 2013</h4>
+			<h4 style="color:#4ab100">2012 to 2013</h4>
 		</div>
 		<div class="col-md-2 vcenter text-right">
 			<a class="about" href="#abt">ABOUT</a>
@@ -62,14 +62,14 @@
 			 <div class="collapse navbar-collapse" id="dropMenu">
 				
 				<ul id="menu" class="nav navbar-nav navbar-inner">
-				  <li class="active"><a data-match= 'Schoolwide' href="#contact">ALL STUDENTS</a></li>
-				  <li><a data-match= 'Asian' href="#contact">ASIAN</a></li>
-				  <li><a data-match= 'Black' href="#contact">AFRICAN AMERICAN/BLACK</a></li>
-				  <li><a data-match= 'Hispanic' href="#contact">HISPANIC</a></li>
-				  <li><a data-match= 'White' href="#contact">WHITE</a></li>
-				  <li><a data-match= 'EngLearner' href="#contact">ENGLISH LEARNER</a></li>
-				  <li><a data-match= 'LowIncome' href="#contact">LOW INCOME</a></li>
-				  <li><a data-match= 'Disability' href="#contact">DISABILITY</a></li>
+				  <li class="active"><a data-match= 'ALL' href="#contact">ALL STUDENTS</a></li>
+				  <li><a data-match= 'AS' href="#contact">ASIAN</a></li>
+				  <li><a data-match= 'AA' href="#contact">AFRICAN-AMERICAN or BLACK</a></li>
+				  <li><a data-match= 'HI' href="#contact">LATINO</a></li>
+				  <li><a data-match= 'WH' href="#contact">WHITE</a></li>
+				  <li><a data-match= 'EL' href="#contact">ENGLISH LEARNER</a></li>
+				  <li><a data-match= 'SD' href="#contact">LOW INCOME</a></li>
+				  <li><a data-match= 'DI' href="#contact">DISABILITY</a></li>
 
 				</ul>
 			</div>
@@ -104,13 +104,13 @@
 					<div class="col-md-12">
 					<!--<h4 id='theDistrict'></h4>-->
 						<div id="selectedSchool">
-							
+						<h5 id="lblSelected">All Students</h5>	
 						<table id="theScores" class="tablesorter table-responsiv table-condensed">
 							<thead>
 							<tr id="headerRow">
 								<th>School<span  class="glyphicon glyphicon-eject" style="color:#66CD00;float:right" ></span></th>
-								<th id="selScore"><span  style="color:#66CD00" class="glyphicon glyphicon-eject" ></span> API Score</th>
-								<th>Difference from School's Average<span  class="glyphicon glyphicon-eject" style="color:#66CD00;float:right" ></span></span></th>
+								<th id="selScore"></span><span style="text-transform:uppercase"> API </span> Score <span  style="color:#66CD00" class="glyphicon glyphicon-eject" ></th>
+								<th class="thirdColumn">Difference from School's Average<span class="glyphicon glyphicon-eject" style="color:#66CD00;float:right" ></span></span></th>
 							</tr>
 							</thead>
 							<tbody id="theSchools">
@@ -131,17 +131,19 @@
 				</div>
 			</div>
 		<div class="row-fluid">
-			<div class="col-md-8" id="aboutsection">
+			<div class="col-md-12" id="aboutsection">
 			<!--<a name="about"></a>-->
 				<h2><a name="abt"></a>What are API Scores?</h2>
 					<ul class="faq">
 					<li>The Academic Performance Index (API) measures the academic performance and improvement of schools.  This is based on results from Standardized Testing & Reporting (STAR) and the California High School Exit Exam (CAHSEE).</li>
-					<li>The state has set a score of 800 out a possible 1,000 as the target for all schools to meet.</li>
-					<li>However, because the tests are changing to the new Common Core State Standards, there will be no more API scores until the 2015-2016 school year- this is to allow the whole system to adapt to this new testing approach.</li>
-					<li>Up till 2012 Oakland was the most improved urban schol district for the previous eight years!</li>
-					<li>Scores in 2012/2013 were down in Oakland which was consistent with the trends statewide- the first time scores fell widely in more than a decade.</li>
-					<li>Each sub group of students is scored separately- we believe it is important to understand the way that different groups perform compared to other groups, which is why we have made it easy for you to map the scores for different ethnic and other sub groups of or school district.</li>
+					<li>The state has set a score of 800 out of a possible 1,000 as the target for all schools to meet.</li>
+					<li>However, because the tests are changing to the new Common Core State Standards, there will be no more API scores until the 2015-2016 school year. This is to allow the whole system to adapt to this new testing approach.</li>
+					<li>Up until 2012 Oakland was the most improved urban schol district for the previous eight years!</li>
+					<li>Scores in 2012/2013 went down in Oakland which was consistent with the trends statewide- the first time scores fell widely in more than a decade.</li>
+					<li>Each sub group of students is scored separately. We believe it is important to understand the way that different groups perform compared to other groups, which is why we have made it easy for you to map the scores for different ethnic and other sub groups of or school district.</li>
 					<li>This site includes both public schools and public charter schools.</li>
+					<li>"Asian" subgroup does not include Filipino(241 students) or Native Hawaiian or Pacific Islanders (312 students).</li>
+					<li>Please refer to <a href='http://www.cde.ca.gov/ta/ac/ap/glossary13f.asp#gf15'>California Department of Education </a> website for descriptions of subgroups and API testing</li>
 					</ul>
 			</div>
 		</div>
@@ -170,13 +172,20 @@
 	  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 	  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
-	  <script src="OUSD_API_0610.geojson"></script>
+	  <script src="OUSD_APIScores_1213.json"></script>
 	  <script src="Data.js"></script>
 	  <script type="text/javascript" src="highcharts.js"></script>
 	  <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
  
 
   <script>
+	//set up some variables to match data source	
+	var theSelected = 'ALL';
+	var score2013 = theSelected + "_API13";
+	var	score2012 = theSelected + "_API12";
+	var num2013 = theSelected + "_NUM";
+	var selectedLabel = labels[theSelected];
+	var geojson;
 
 $("#menu li a").click(function(){
 	$("#dropMenu").collapse('hide');
@@ -198,7 +207,7 @@ $('#sidebar').affix({
         top: 200
       }
 });	
-	var theSelected = 'Schoolwide';
+	
 	//ESTABLISH DATA BUCKETS AND COLORS
 	function getColor(d) {
     return d > 900 ? '#2c7bb6' :
@@ -214,7 +223,7 @@ $('#sidebar').affix({
 	//var map = L.map('map').setView([37.7919584,-122.2287941,13], 12);
 	
 	var layer = new L.StamenTileLayer("toner");
-var map = new L.Map("map", {
+	var map = new L.Map("map", {
     center: new L.LatLng(37.7919584,-122.2287941),
     zoom: 12
 });
@@ -224,12 +233,12 @@ var map = new L.Map("map", {
 	
 	//DYNAMICALLY ASSIGN A STYLE TO LAYER
 	function style(feature) {
-    console.log(theSelected);
+    //console.log(theSelected);
 	return {
-        fillColor: getColor(feature.properties[theSelected]),
+        fillColor: getColor(feature.properties[score2013]),
         weight: 2,
         opacity: 1,
-        color: getColor(feature.properties[theSelected]),
+        color: getColor(feature.properties[score2013]),
         fillOpacity: 0.9
     };
 }
@@ -242,47 +251,48 @@ var geojsonMarkerOptions = {
     opacity: 1,
     fillOpacity: 0.8
 };
+
 function highlightFeature(e) {
 			var layer = e.target;
-
+			//console.log(layer)
 			layer.setStyle({
-				weight: 2,
-				color: '#fff',
-				dashArray: '',
-				fillOpacity: 0.7
+				fillColor: getColor(layer.feature.properties[score2013]),
+        		weight: 4,
+        		opacity: 1,
+        		color: '#333333',
+        		fillOpacity: 0.9
 			});
 
 			if (!L.Browser.ie && !L.Browser.opera) {
 				layer.bringToFront();
 			}
-
-			info.update(layer.feature.properties);
 		}
 
-function resetHighlight(e) {
-			geojson.resetStyle(e.target);
-			info.update();
-		}
+function resetHighlight(e){
+	theSchoolLayer.resetStyle(e.target)
+}
+
 		
 function theFilter(feature,layer){
 	//console.log("yeah : " + theSelected);
-	return feature.properties[theSelected] >0;
+	return feature.properties[score2013] > 0;
 }
 //GOOGLE CHART
 function drawChart(feature){
 	$("#summaryBox").show();
 	$('#schoolTitle').html(feature.properties.School)
 	
-	
+	console.log(feature.properties);
+
 	$('#chartArea').highcharts({
         chart: {
             type: 'bar'
         },
         title: {
-            text: feature.properties.School
+            text: ""
         },
         xAxis: {
-            categories: ["All Students","Asian","Black or African American","Hispanic or Latino","White"]
+            categories: ["All Students","Asian","Black/African American","Latino","White","English Learners","Socioeconomically Disadvantaged","Disability"]
         },
         yAxis: {
             title: {
@@ -293,27 +303,56 @@ function drawChart(feature){
         },
         series: [{
             name: feature.properties.School,
-            data: [feature.properties.Schoolwide,feature.properties.Asian,feature.properties.Black,feature.properties.Hispanic,feature.properties.White]
+            data: [feature.properties.ALL_API13,feature.properties.AS_API13,feature.properties.AA_API13,feature.properties.HI_API13,feature.properties.WH_API13,feature.properties.EL_API13,feature.properties.SD_API13,feature.properties.DI_API13]
         }, {
             name: 'District',
-            data: [721,824,644,687,896]
+            data: [721,824,644,687,896,686,687,552]
         }]
     });
 	
 
 }
 
+
+
 function onEachFeature(feature, layer) {
-		// make the popup
+		// draw the chart on layer click
+		score2013 = theSelected + "_API13";
+		score2012 = theSelected + "_API12";
+		num2013 = theSelected + "_NUM";
+		selectedLabel = labels[theSelected];
+		
+		
+		layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight
+        });
+		//add functions to map click like chart draw and table highlight
 		layer.on('click',function(){
 			drawChart(feature);
+			//SCROLL TO ROW IN TABLE
+			//var w = $('#theScores');	
+			$('#theScores tr').removeClass('activeRow')
+			var row = $('#r' + feature.properties.NCESSchool).addClass('activeRow');
+			var rowpos = $('#r' + feature.properties.NCESSchool).position();
+
+			$('#theScores').scrollTop(rowpos.top);
+			//if(row.length){
+			//	w.scrollTop(row.offset().top - (w.height()/2));
+			//}
+
+			//$("#r" + feature.properties.NCESSchool).get(0).scrollIntoView();
+			//$("#r" + feature.properties.NCESSchool).css("border:solid thick green");
+
 		});
 		
+		//CREATE  VALUES FOR GROUP
+
+			var theDiffClass = "same";
+			//console.log(score2013);
+			var theDiff = feature.properties[score2013] - feature.properties.ALL_API13;
+			//console.log (theDiff);
 		
-		
-		var theDiffClass = "same";
-		var theDiff = feature.properties[theSelected] - feature.properties.Schoolwide;
-		console.log (theDiff);
 		switch (true){
 			case theDiff > 0:
 				theDiffClass = "glyphicon glyphicon-arrow-up over";
@@ -325,20 +364,44 @@ function onEachFeature(feature, layer) {
 			
 		}
 		
-		$("#selScore").html(theSelected + "<br/> Api Score" )
-		//create row in table
-		$('#theSchools').append("<tr><td id='firstRow'><a href='#'id='s" + feature.properties.NCESSchool + "'>" + feature.properties.School + "</a></td><td>" + feature.properties[theSelected] + 
-		"</td><td style='padding-left:10px'><span class='" + theDiffClass + "'></span>  " +
-		theDiff +"</td></tr>");
+		
+		$("#selScore").html(labels[theSelected] + "<br/> API Score" )
+		
+		if(theSelected == 'ALL'){
+			layer.bindPopup("<div id='thePopup'><strong>" + feature.properties.School + "</strong><BR/>" + feature.properties.MailStreet + "<br>Oakland,CA " + feature.properties.Zip + "<h2 style='margin-bottom:1px'>" + feature.properties[score2013] + "<span style='color:#333333;font-size:12px;font-weight:bold'>:  SCHOOL API</span></h2><span style='width:100%;text-align:center;font-size:12px'> (" + feature.properties[num2013] + " Students Tested)</span></div>" 
+				);
+			$('.thirdColumn').hide();
+		}
+		else {
+			//POPUP FOR SUBGROUP
+			layer.bindPopup("<div id='thePopup'><strong>" + feature.properties.School + "</strong><BR/>" + feature.properties.MailStreet + "<br>Oakland,CA " + feature.properties.Zip + "<h2 style='margin-bottom:1px;color:#808080'>" + feature.properties.ALL_API13 + "<span style='color:#333333;font-size:12px;font-weight:bold'>:  SCHOOL API</span></h2><span style='width:100%;text-align:center;font-size:12px'> (" + feature.properties.ALL_NUM + " Students Tested)</span><h2 style='margin-bottom:1px'>" + feature.properties[score2013] + "<span style='color:#333333;font-size:12px;font-weight:bold'>:  " + selectedLabel + " API</span></h2><span style='width:100%;text-align:center;font-size:12px'> (" + feature.properties[num2013] + " Students Tested)</span><h3 class='text-center thirdColumn'><span class='text-center "+ theDiffClass +"  thirdColumn'>" + theDiff + "</span></h3></div>"  
+				);	
+			$('.thirdColumn').show();
+			}
+		//create row in table	
+		$('#theSchools').append("<tr id='r" + feature.properties.NCESSchool + "'><td id='firstRow'><a href='#' id='s" + feature.properties.NCESSchool + "'>" + feature.properties.School + "</a></td><td>" + feature.properties[score2013] + 
+			"</td><td class='thirdColumn' style='padding-left:10px'><span class='" + theDiffClass + "'></span>  " +
+			theDiff +"</td></tr>");
+
+		
 		//bind to map popup
 		$("#s" + feature.properties.NCESSchool).click(function(){
+			console.log(feature.properties.NCESSchool);
 			drawChart(feature);
 			layer.openPopup();
 			});
-		layer.bindPopup("<div id='thePopup'><strong>" + feature.properties.School + "</strong><BR/>" + feature.properties.MailStreet + "<br>Oakland,CA " + feature.properties.Zip
-		+ "<h5>Selected School API</h5><table class='table table-bordered'><tr><td> API for school:</td><td>" + feature.properties.Schoolwide + "</td></tr><tr><td>" +
-		theSelected + " :</td><td> " + feature.properties[theSelected] + "</td></tr></table><h3 class='text-center'><span class='text-center "+ theDiffClass +"'>" + theDiff + "</span></h3></div>"
-		);	
+		
+
+		
+		
+
+		
+		
+		
+		
+			
+	
+		
 	}
 
 //MAKE A MAP!
@@ -346,9 +409,9 @@ function resetMap(){
 	try {
 		
 		map.removeLayer(theSchoolLayer);
-		console.log('remove');
+		//console.log('remove');
 	}catch(e){
-	console.log('nothin');
+	//console.log('nothin');
 	}
 	
 	$("#theSchools tr").remove();
@@ -359,7 +422,7 @@ function resetMap(){
 		},
 		filter:theFilter,
 		onEachFeature:onEachFeature
-		}).addTo(map)
+		}).addTo(map);
 	$("#theScores").tablesorter();
 }
 
@@ -378,7 +441,7 @@ resetMap();
 			for (var i = 0; i < grades.length; i++) {
 			from = grades[i];
 			to = grades[i + 1];
-			console.log(getColor(from + 1));
+			//console.log(getColor(from + 1));
 			labels.push(
 			'<li style="background:' + getColor(from + 1) + '">' +
 			from + (to ? '&ndash;' + to : '+') + '</li>');
@@ -396,8 +459,14 @@ $('.nav a').click(function(a){
 	$('#theSchools tr').empty();
 	theSelected = $(this).attr('data-match');
 	//$('#summaryBox').html("District-wide Average : " + $(this).text() + ' : ' + allScores[theSelected] + '<br/>');
+	score2013 = theSelected + "_API13";
+	score2012 = theSelected + "_API12";
+	num2013 = theSelected + "_NUM";
+	selectedLabel = labels[theSelected];
 	resetMap();
 });
+
+
 
   </script>
 

@@ -45,3 +45,7 @@ table.tablesorter .headerSortDown {
 	/*background-image: url(arrows.png);*/
 	background-repeat: no-repeat;
 }
+
+tr.activeRow {
+	background-color:yellow;
+}
